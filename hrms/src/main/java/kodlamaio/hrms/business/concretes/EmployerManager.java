@@ -70,7 +70,7 @@ public class EmployerManager implements EmployerService {
 	}
 
 	private Result isPasswordsSame(EmployerForRegisterDto employer) {
-		if(!employer.getpassword().equals(employer.getVerifyPassword())) return new ErrorResult("Şifreleriniz uyuşmuyor.");
+		if(!employer.getPassword().equals(employer.getVerifyPassword())) return new ErrorResult("Şifreleriniz uyuşmuyor.");
 		return null;
 	}
 

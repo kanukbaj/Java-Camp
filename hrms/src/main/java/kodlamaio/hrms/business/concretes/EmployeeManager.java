@@ -58,7 +58,7 @@ public class EmployeeManager implements EmployeeService {
 				employee.getLastName(),
 				employee.getNationalityId(),
 				employee.getDateOfBirth());
-		this.employeeDao.save(employeeToRegister);
+		this.employeeDao.save(employeeToEmployee);
 		return new SuccessResult("İş arayan kaydı başarılı. Lütfen e-posta adresinize gönderilen doğrulama linkiyle hesabınızı doğrulayınız.");
 	}
 
@@ -98,9 +98,9 @@ public class EmployeeManager implements EmployeeService {
 	}
 
 	private Result isUserExistWithNationalityId(EmployeeForRegisterDto employee) {
-		if(employeeDao.findByNationalityId(employee.getNationalityId()) != null);
+		if(employeeDao.findByNationalityId(employee.getNationalityId()) != null)
 			return new ErrorResult("Bu TCKN ile başka bir kullanıcı mevcut.");
-		return null;
+	return null;
 	}
 
 	
