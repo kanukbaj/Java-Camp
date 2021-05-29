@@ -10,6 +10,7 @@ import kodlamaio.hrms.entities.concretes.dtos.EmployerForRegisterDto;
 public interface EmployerService {
 	
 	DataResult<List<Employer>> getAll();
+	DataResult<Employer> getById(int id);
 	Result register(EmployerForRegisterDto employer);
 
 }
