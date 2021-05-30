@@ -1,4 +1,5 @@
 HUMAN RESOURCE MANAGEMENT SYSTEM (İNSAN KAYNAKLARI BİLGİ SİSTEMİ)
+
 Req 1 : İş Arayanlar sisteme kayıt olabilmelidir.
 
 Kabul Kriterleri:
