@@ -28,13 +28,23 @@ Liste, tablo formunda gelmelidir. Listede firmadı, genel iş pozisyonu adı, a�
 
 
 ✔️ Veri tabanı güncellendi. 
+
 ✔️ Sahte e-posta servisi eklendi. 
+
 ✔️ Swagger desteği getirildi. 
+
 ✔️ Gerçek ve sahte mernis servisi eklendi. 
+
 ✔️ Daha önce kayıtlı e-posta ve tcno alanlarının kontrolü için işlemler eklendi. 
+
 ✔️ Ekleme işleminde girilen alanların boş olup olmadığını kontrol eden işlemler eklendi. 
+
 ✔️ İş verenler, iş arayanlar, departmanlar ve iş pozisyonları listelenebilir, silinebilir ve eklenebilir hale getirildi. 
+
 ✔️ Sistem personeli listelenebilir, silinebilir ve eklenebilir hale getirildi. 
+
 ✔️ Result implementasyonu ile hata ve başarı mesajları döndürülecek şekilde ayarlandı. 
+
 ✔️ İş ilanları listelenebilir, silinebilir, pasif hale getirilebilir ve eklenebilir hale getirildi. 
+
 ✔️Şehirler eklendi 
