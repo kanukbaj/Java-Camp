@@ -25,3 +25,16 @@ Liste, tablo formunda gelmelidir. Listede firmadı, genel iş pozisyonu adı, a�
 Liste, tablo formunda gelmelidir. Listede firmadı, genel iş pozisyonu adı, açık pozisyon adedi, yayın tarihi, son başvuru tarihi bilgileri olmalıdır. Req 10 : Sistemde bir firmaya ait tüm aktif iş ilanları listelenebilmelidir.
 
 Liste, tablo formunda gelmelidir. Listede firmadı, genel iş pozisyonu adı, açık pozisyon adedi, yayın tarihi, son başvuru tarihi bilgileri olmalıdır. Req 11 : İş verenler sistemdeki bir ilanı kapatabilmelidir. (Pasif ilan) NOT:Projenin şu an backend kısmı yapılmaktadır.
+
+
+✔️ Veri tabanı güncellendi.
+✔️ Sahte e-posta servisi eklendi.
+✔️ Swagger desteği getirildi.
+✔️ Gerçek ve sahte mernis servisi eklendi.
+✔️ Daha önce kayıtlı e-posta ve tcno alanlarının kontrolü için işlemler eklendi.
+✔️ Ekleme işleminde girilen alanların boş olup olmadığını kontrol eden işlemler eklendi.
+✔️ İş verenler, iş arayanlar, departmanlar ve iş pozisyonları listelenebilir, silinebilir ve eklenebilir hale getirildi.
+✔️ Sistem personeli listelenebilir, silinebilir ve eklenebilir hale getirildi.
+✔️ Result implementasyonu ile hata ve başarı mesajları döndürülecek şekilde ayarlandı.
+✔️ İş ilanları listelenebilir, silinebilir, pasif hale getirilebilir ve eklenebilir hale getirildi.
+✔️Şehirler eklendi
