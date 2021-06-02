@@ -1,4 +1,4 @@
-package kodlamaio.hrms.core.utilities.helpers.email;
+package kodlamaio.hrms.core.utilities.mail;
 
 import kodlamaio.hrms.core.utilities.results.Result;
 

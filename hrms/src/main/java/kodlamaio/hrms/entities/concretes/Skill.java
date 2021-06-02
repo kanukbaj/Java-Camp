@@ -1,40 +1,42 @@
 package kodlamaio.hrms.entities.concretes;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@Table(name = "cities")
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hiernateLazyInitializer", "handler", "jobAdvertisements"})
-public class City {
+@Data
+@Table(name = "skills")
+public class Skill { 
 	
-	@Id
+	@Id()
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable=false)
+	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "name", nullable=false)
+	@Column(name = "name",nullable = false)
 	private String name;
 	
-	@OneToMany(mappedBy = "city", fetch = FetchType.LAZY)
-	private List<JobAdvertisement> jobAdvertisements;
+	@ManyToMany()
+	@JoinTable(
+				name = "resume_skills",
+				joinColumns = @JoinColumn(name ="skill_id"),
+				inverseJoinColumns = @JoinColumn(name = "resume_id"))
+	private Set<Resume> resume;
 	
 
 }

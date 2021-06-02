@@ -1,39 +1,42 @@
 package kodlamaio.hrms.entities.concretes;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@Table(name="JobPosition")
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "jobAdvertisements"})
-public class JobPosition {
+@Data
+@Table(name = "school_departments")
+public class SchoolDepartment {
 	
-	@Id
+	@Id()
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="Id", nullable=false)
+	@Column(name = "id")
 	private int id;
 	
-	@Column(name="positionName", unique = true)
-	private String positionName;
+	@Column(name = "department", nullable = false)
+	private String department;
 	
-	@OneToMany(mappedBy = "jobPosition", fetch = FetchType.LAZY)
-	private List<JobAdvertisement> jobAdvertisements;
+	@ManyToOne()
+	@JoinColumn(name = "school_id")
+	private School school;
 	
+	@OneToMany(mappedBy = "schoolDepartment")
+	Set<EmployeeSchoolDepartment> employeeSchoolDepartments;
+	
+
 }

@@ -1,12 +1,14 @@
 package kodlamaio.hrms.entities.concretes;
 
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -16,9 +18,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name="Employees")
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="Employees")
 public class Employee {
 	
 	@Id
@@ -42,6 +44,9 @@ public class Employee {
 	@JoinColumn(name="UserId")
 	private User user;
 	
+	@OneToMany(mappedBy = "employee")
+	Set<EmployeeSchoolDepartment> employeeSchoolDepartments;
+	
 	public Employee(int userId, String firstName, String lastName, String nationalityId, Date birthOfDate) {
 		this.userId = userId;
 		this.firstName = firstName;
@@ -50,52 +55,5 @@ public class Employee {
 		this.birthOfDate = birthOfDate;
 	}
 
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getNationalityId() {
-		return nationalityId;
-	}
-
-	public void setNationalityId(String nationalityId) {
-		this.nationalityId = nationalityId;
-	}
-
-	public Date getBirthOfDate() {
-		return birthOfDate;
-	}
-
-	public void setBirthOfDate(Date birthOfDate) {
-		this.birthOfDate = birthOfDate;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
+		
 }

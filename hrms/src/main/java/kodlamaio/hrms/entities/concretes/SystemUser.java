@@ -20,30 +20,8 @@ public class SystemUser {
 	@Column(name="UserId")
 	private int userId;
 	
-	public SystemUser(int userId, String roles) {
-		super();
-		this.userId = userId;
-		this.roles = roles;
-	}
-
 	@Column(name="Roles")
 	private String roles;
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
-	public String getRoles() {
-		return roles;
-	}
-
-	public void setRoles(String roles) {
-		this.roles = roles;
-	}
-	
-
 }
+
+	

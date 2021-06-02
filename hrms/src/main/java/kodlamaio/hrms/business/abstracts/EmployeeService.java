@@ -5,7 +5,7 @@ import java.util.List;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.Employee;
-import kodlamaio.hrms.entities.concretes.dtos.EmployeeForRegisterDto;
+import kodlamaio.hrms.entities.dto.EmployeeForRegisterDto;
 
 public interface EmployeeService {
 	DataResult<List<Employee>> getAll();

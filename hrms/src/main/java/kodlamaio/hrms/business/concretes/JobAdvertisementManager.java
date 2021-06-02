@@ -18,7 +18,7 @@ import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobAdvertisementDao;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
-import kodlamaio.hrms.entities.concretes.dtos.JobAdvertisementForAddDto;
+import kodlamaio.hrms.entities.dto.JobAdvertisementForAddDto;
 
 @Service
 public class JobAdvertisementManager implements JobAdvertisementService {
@@ -61,6 +61,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 				isJobPositionValid(jobAdvertisement.getJobPositionId()),
 				isJobDescValid(jobAdvertisement.getJobDescription()),
 				isCityValid(jobAdvertisement.getCityId()),
+				isOpenPositionValid(jobAdvertisement.getOpenPositionCount()),
 				isEndDateValid(jobAdvertisement.getLastAppllyDate())
 				);
 		
@@ -118,7 +119,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		return new SuccessResult();
 	}
 		
-	private Result isOpenpositionValid(int count) {
+	private Result isOpenPositionValid(int count) {
 		if(count<=0) return new ErrorResult("Açık iş pozisyonu 0 ve 0'dan küçük olamaz.");
 		return new SuccessResult();
 	}

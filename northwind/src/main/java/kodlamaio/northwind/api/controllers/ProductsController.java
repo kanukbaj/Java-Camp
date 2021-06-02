@@ -14,6 +14,7 @@ import kodlamaio.northwind.business.abstracts.ProductService;
 import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.entities.concretes.Product;
+import kodlamaio.northwind.entities.dtos.ProductWithCategoryDto;
 
 @RestController
 @RequestMapping("/api/products")
@@ -73,6 +74,11 @@ public class ProductsController {
 	@GetMapping("/getAllSortedAsc")
 	public DataResult<List<Product>> getAllSortedAsc(){
 		return this.productService.getAllSortedAsc();
+	}
+	
+	@GetMapping("/getgetProductWithCategoryDetails")
+	public DataResult<List<ProductWithCategoryDto>> getproductWithCategoryDetails(){
+		return this.productService.getProductWithCategoryDetails();
 	}
 	
 }

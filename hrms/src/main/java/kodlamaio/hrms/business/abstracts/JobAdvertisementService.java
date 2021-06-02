@@ -5,7 +5,7 @@ import java.util.List;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
-import kodlamaio.hrms.entities.concretes.dtos.JobAdvertisementForAddDto;
+import kodlamaio.hrms.entities.dto.JobAdvertisementForAddDto;
 
 public interface JobAdvertisementService {
 	DataResult<List<JobAdvertisement>> findByIsActiveTrue();

@@ -22,11 +22,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "jobAdvertisements")
 @NoArgsConstructor
 @AllArgsConstructor
-public class JobAdvertisement {
+public class JobAdvertisement { 
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id, nullable=false")
+	@Column(name = "id", nullable=false)
 	private int id;
 	
 	@Column(name = "jobDescription", nullable=false)

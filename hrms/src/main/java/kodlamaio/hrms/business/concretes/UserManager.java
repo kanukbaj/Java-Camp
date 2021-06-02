@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.hrms.business.abstracts.UserService;
-import kodlamaio.hrms.core.utilities.helpers.email.EmailService;
+import kodlamaio.hrms.core.utilities.mail.EmailService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.ErrorDataResult;
+import kodlamaio.hrms.core.utilities.results.ErrorResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
@@ -55,7 +56,7 @@ public class UserManager implements UserService{
 	public Result verifyUser(String email, String verificationCode) {
 		User user = userDao.findByEmailAndEmailVerifyCode(email, verificationCode);
 		if(user == null)
-			return new ErrorDataResult("Doğrulama başarısız lütfen bilgileri doğru girdiğinizden emin olun.");
+			return new ErrorResult("Doğrulama başarısız lütfen bilgileri doğru girdiğinizden emin olun.");
 		
 		user.setEmailVerified(true);
 		userDao.save(user);

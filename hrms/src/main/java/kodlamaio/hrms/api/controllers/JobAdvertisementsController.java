@@ -12,7 +12,7 @@ import kodlamaio.hrms.business.abstracts.JobAdvertisementService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
-import kodlamaio.hrms.entities.concretes.dtos.JobAdvertisementForAddDto;
+import kodlamaio.hrms.entities.dto.JobAdvertisementForAddDto;
 
 @RestController
 @RequestMapping("/api/jobadvertisements")

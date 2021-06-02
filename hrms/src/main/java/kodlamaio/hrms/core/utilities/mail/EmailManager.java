@@ -1,4 +1,4 @@
-package kodlamaio.hrms.core.utilities.helpers.email;
+package kodlamaio.hrms.core.utilities.mail;
 
 import org.springframework.stereotype.Service;
 
